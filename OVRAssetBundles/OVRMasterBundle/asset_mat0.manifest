@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 4293295520
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e8bf0ae60930702239e23a0f1508806f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: a15026e7645264409a88f84f584030a1
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Materials/Gray.mat
+- Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
+- Assets/Materials/Blue.mat
+- Assets/Materials/Red.mat
+Dependencies: []

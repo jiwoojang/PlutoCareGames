@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 116519022
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6937ba3a22065524cc0900c0bfcf8035
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/RightHandAnimator.controller
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/LeftHandAnimator.controller
+Dependencies:
+- D:/Unity/Projects/PlutoCare/PlutoCare/OVRAssetBundles/OVRMasterBundle/asset_fbx0

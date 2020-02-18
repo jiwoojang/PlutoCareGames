@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3754413947
+CRC: 2812592638
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c521a5df9108c4e913bb78d6cb95df87
+    Hash: 0fb0864c258a2359b85f8a9cce54ee74
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 322f1d552b578a92c4b61c944f020fe9
+    Hash: 70ccec01e9a9eeb50e040df49fe78a62
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -35,8 +35,6 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 74
   Script: {instanceID: 0}
-- Class: 81
-  Script: {instanceID: 0}
 - Class: 89
   Script: {instanceID: 0}
 - Class: 90
@@ -58,8 +56,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: df8e1d778abf442e4bec449c360e9e1c, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: aab4c587457d86f4ca80582f946785ad, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 79b7e65854ace8f44b05c52c6e824354, type: 3}
@@ -80,5 +76,5 @@ ClassTypes:
 Assets:
 - Assets/Scenes/SampleScene.unity
 Dependencies:
-- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_prefab0

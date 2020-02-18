@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 826930714
+CRC: 3964005702
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4c5bbdee8e02163b0f93d7bdca07d92c
+    Hash: 5b6be20b5301b19229027acc53cc7b58
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5519432728db9df34f8789a17ab317d6
@@ -58,4 +58,4 @@ ClassTypes:
 Assets:
 - Assets/Oculus/Avatar/Samples/LocalAvatar/LocalAvatar.unity
 Dependencies:
-- D:/Unity/Projects/PlutoCare/PlutoCare/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_prefab0

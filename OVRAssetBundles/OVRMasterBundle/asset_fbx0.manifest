@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3395219887
+CRC: 3643846870
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 05b99809ab07603edca0a17eb2f72798
+    Hash: 183211a4607aea428a2ea20028431daa
   TypeTreeHash:
     serializedVersion: 2
     Hash: 809831b238e0e81d6a46d5df413559b0
@@ -51,4 +51,4 @@ Assets:
 - Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_fist_anim.fbx
 - Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_pinch_anim.fbx
 Dependencies:
-- D:/Unity/Projects/PlutoCare/PlutoCare/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_mat0

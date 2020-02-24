@@ -1,19 +1,17 @@
 ManifestFileVersion: 0
-CRC: 3272547421
+CRC: 229780608
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a23336116efb82d52c2d689f87270ded
+    Hash: bbfade96192cc83fe5ffed97d7de9d0e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 93e3e5dc506c65bdbe4a260fe15e8e00
+    Hash: f46da05a1e734cbf22bacb55e23d5123
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
 - Class: 4
-  Script: {instanceID: 0}
-- Class: 20
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
@@ -21,20 +19,12 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 54
   Script: {instanceID: 0}
-- Class: 81
-  Script: {instanceID: 0}
 - Class: 90
   Script: {instanceID: 0}
 - Class: 91
   Script: {instanceID: 0}
 - Class: 95
   Script: {instanceID: 0}
-- Class: 114
-  Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: aab4c587457d86f4ca80582f946785ad, type: 3}
 - Class: 114
@@ -51,8 +41,7 @@ Assets:
 - Assets/Oculus/SampleFramework/Core/CustomHands/CustomHandLeft.prefab
 - Assets/Oculus/SampleFramework/Core/CustomHands/CustomHandRight.prefab
 - Assets/Oculus/SampleFramework/Core/CustomHands/Models/HandPoseDefaultPf.prefab
-- Assets/Oculus/VR/Prefabs/OVRCameraRig.prefab
 Dependencies:
-- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_fbx0
-- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_controller0
-- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_controller0

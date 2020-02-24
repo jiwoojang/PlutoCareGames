@@ -1,25 +1,23 @@
 ManifestFileVersion: 0
-CRC: 1982787357
+CRC: 2204057808
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3846a652deee4bb3f79e56fff9052045
+    Hash: 3d9216accb9500cc8687f5bc772b5e5e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2164263bd948184a9373784f776f453a
+    Hash: a15026e7645264409a88f84f584030a1
 HashAppended: 0
 ClassTypes:
 - Class: 21
   Script: {instanceID: 0}
-- Class: 28
-  Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/SportsBottle_metal.mat
-- Assets/Oculus/SampleFramework/Usage/GuardianBoundarySystem/Materials/MAT_floor_wood_02.mat
+- Assets/Materials/Gray.mat
+- Assets/Materials/GrayUnlit.mat
 - Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
 - Assets/Materials/Blue.mat
 - Assets/Materials/Red.mat
 Dependencies:
-- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_resources

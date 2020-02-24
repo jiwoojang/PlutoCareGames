@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/test1.unity
     guid: ca204367a88b91844b16d9b4c08730a7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/boxing.unity
     guid: 563eb016c6eb1254791bfca59ded145f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/pull down.unity
     guid: 1f92f8c69e024f74385d85f3f31b7266
   m_configObjects: {}

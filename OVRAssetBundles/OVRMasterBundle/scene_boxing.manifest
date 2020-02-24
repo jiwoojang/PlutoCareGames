@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2338881810
+CRC: 3785914089
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 77813eeb4310f5f54ecafdd7e5b7b193
+    Hash: 0b743336f5b7b1035f8c2588a4f2a9b6
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 8a315d867218ff93d8b2d409317dbeba
+    Hash: 7ff02d598e44fff0ca763e68824b3864
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -46,9 +46,19 @@ ClassTypes:
 - Class: 108
   Script: {instanceID: 0}
 - Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 7d923ef002f9fe34fb2a88194dfc1c63, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 90b4a775137162647a9aaec5d3ebb690, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
 - Class: 114
@@ -56,8 +66,16 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 79b7e65854ace8f44b05c52c6e824354, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
 - Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 135
   Script: {instanceID: 0}
 - Class: 136
   Script: {instanceID: 0}
@@ -69,8 +87,14 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 157
   Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
 Assets:
 - Assets/Scenes/boxing.unity
 Dependencies:
-- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_prefab0

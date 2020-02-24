@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2270368909
+CRC: 1020126412
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dabcb88d36d273d2b731ae2eea7ebb4d
+    Hash: 50f91979b2292af8886d330f6a2d881f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 84208e1ace629d6bbe83fd8ea9842b4c
@@ -78,5 +78,5 @@ ClassTypes:
 Assets:
 - Assets/Scenes/pull down.unity
 Dependencies:
-- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- D:/Pluto care game/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/Unity/Projects/PlutoCareGames/OVRAssetBundles/OVRMasterBundle/asset_prefab0

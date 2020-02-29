@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RightHandCollider
   - LeftHandCollider
+  - AllHandsCollider
   layers:
   - Default
   - TransparentFX

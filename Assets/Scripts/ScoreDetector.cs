@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class ScoreDetector : MonoBehaviour
 {
-    public bool shouldDetectLeft;
+    public enum CollisionSource
+    {
+        None,
+        LeftHand,
+        RightHand,
+    }
+
     public GameObject debug;
+    public CollisionSource collisionSource;
 
     // Basic collision based score increment
     private void OnTriggerEnter(Collider other) {
@@ -15,12 +22,14 @@ public class ScoreDetector : MonoBehaviour
             return;
         }
 
-        if (shouldDetectLeft) {
-            if (other.gameObject.tag == "LeftHandCollider") {
+        if (collisionSource == CollisionSource.LeftHand) {
+            if (other.gameObject.tag == "LeftHandCollider" || other.gameObject.tag == "AllHandsCollider") {
                 ScoreManager.instance.IncreaseLeftScore();
             }
-        } else {
-            if (other.gameObject.tag == "RightHandCollider") {
+        }
+        
+        if (collisionSource == CollisionSource.RightHand){
+            if (other.gameObject.tag == "RightHandCollider" || other.gameObject.tag == "AllHandsCollider") {
                 ScoreManager.instance.IncreaseRightScore();
             }
         }

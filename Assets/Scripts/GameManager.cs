@@ -91,12 +91,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
-
         // Setup new config
         currentConfig = config;
 
         if (currentConfig.bagConfiguration != null) {
-            currentConfig.bagConfiguration.SetActive(false);
+            currentConfig.bagConfiguration.SetActive(true);
         }
 
         int counter = currentConfig.levelTime;

@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 91981862}
   m_Layer: 0
   m_Name: boxing bag Left
-  m_TagString: LeftHandCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,7 +314,7 @@ Transform:
   m_GameObject: {fileID: 115158367}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.744, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.4, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.2947611, z: 0.01}
   m_Children: []
   m_Father: {fileID: 2040911943}
   m_RootOrder: 1
@@ -531,6 +531,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1735204948}
+  - {fileID: 1118117275}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -665,6 +666,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135480402}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!137 &328761830 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 137383442524578654, guid: ba1fa4a8c66106b4988c88fe4b8e8502,
+    type: 3}
+  m_PrefabInstance: {fileID: 1151168543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &332536359
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +702,7 @@ Transform:
   m_GameObject: {fileID: 332536359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.744, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.4, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.2947611, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1284010826}
   m_RootOrder: 1
@@ -711,7 +718,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.13476485, y: 0.38448283, z: -0.03738158}
+  m_ConnectedAnchor: {x: 0.13476485, y: -0.02014215, z: -0.03738158}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -851,7 +858,7 @@ Transform:
   m_GameObject: {fileID: 389843480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.744, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.4, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.29476112, z: 0.01}
   m_Children: []
   m_Father: {fileID: 91981862}
   m_RootOrder: 1
@@ -927,7 +934,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.2695297, y: 0.38448283, z: -0.03738158}
+  m_ConnectedAnchor: {x: 0.2695297, y: -0.02014215, z: -0.03738158}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1146,7 +1153,7 @@ GameObject:
   - component: {fileID: 516346172}
   m_Layer: 0
   m_Name: boxing bag right
-  m_TagString: RightHandCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1191,7 +1198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542064317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.196, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1284010826}
@@ -1229,7 +1236,7 @@ Transform:
   m_GameObject: {fileID: 631184890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.744, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.4, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.2947611, z: 0.01}
   m_Children: []
   m_Father: {fileID: 516346172}
   m_RootOrder: 1
@@ -1305,7 +1312,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.2695297, y: 0.38448283, z: -0.03738158}
+  m_ConnectedAnchor: {x: -0.2695297, y: -0.02014215, z: -0.03738158}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1556,7 +1563,7 @@ Transform:
   m_GameObject: {fileID: 694927567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.744, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.4, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.2947611, z: 0.01}
   m_Children: []
   m_Father: {fileID: 843433226}
   m_RootOrder: 1
@@ -1572,7 +1579,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.13476485, y: 0.38448283, z: -0.03738158}
+  m_ConnectedAnchor: {x: -0.13476485, y: -0.02014215, z: -0.03738158}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1832,7 +1839,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826842993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.196, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2025354254}
@@ -1850,7 +1857,7 @@ GameObject:
   - component: {fileID: 843433226}
   m_Layer: 0
   m_Name: boxing bag right
-  m_TagString: RightHandCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2072,7 +2079,7 @@ Transform:
   m_GameObject: {fileID: 939650710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.744, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.4, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.2947611, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1906167302}
   m_RootOrder: 1
@@ -2259,6 +2266,9 @@ MonoBehaviour:
     thresholdScore: 0
     bagConfiguration: {fileID: 1201569904}
   angleThresholdDegrees: 20
+  timerText: {fileID: 1118117276}
+  leftHandRenderer: {fileID: 1403299730}
+  rightHandRenderer: {fileID: 328761830}
   state: 0
 --- !u!1 &1106545744
 GameObject:
@@ -2271,7 +2281,7 @@ GameObject:
   - component: {fileID: 1106545745}
   m_Layer: 0
   m_Name: boxing bag right
-  m_TagString: RightHandCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2292,6 +2302,83 @@ Transform:
   m_Father: {fileID: 1201569905}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1118117274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118117275}
+  - component: {fileID: 1118117277}
+  - component: {fileID: 1118117276}
+  m_Layer: 5
+  m_Name: Time
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1118117275
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118117274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.836}
+  m_LocalScale: {x: 0.0033227971, y: 0.0033227971, z: 0.0033227971}
+  m_Children: []
+  m_Father: {fileID: 117516181}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00000059605, y: -0.022}
+  m_SizeDelta: {x: 800, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1118117276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118117274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16104485, g: 0.7264151, b: 0.24876106, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 105
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 121
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'TIME: 0'
+--- !u!222 &1118117277
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118117274}
+  m_CullTransparentMesh: 0
 --- !u!1 &1125132031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,7 +2522,7 @@ Transform:
   m_GameObject: {fileID: 1160717680}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.744, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.4, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.2947611, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1106545745}
   m_RootOrder: 1
@@ -2585,7 +2672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201569904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.196, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1906167302}
@@ -2762,7 +2849,7 @@ GameObject:
   - component: {fileID: 1284010826}
   m_Layer: 0
   m_Name: boxing bag Left
-  m_TagString: LeftHandCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2813,7 +2900,7 @@ Transform:
   m_GameObject: {fileID: 1322752565}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.744, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.4, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.2947611, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1432636573}
   m_RootOrder: 1
@@ -2829,7 +2916,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.13476485, y: 0.38448283, z: -0.03738158}
+  m_ConnectedAnchor: {x: 0.13476485, y: -0.02014215, z: -0.03738158}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3026,7 +3113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395221233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.797, z: 0.406}
+  m_LocalPosition: {x: 0, y: 2.6009998, z: 0.406}
   m_LocalScale: {x: 2.2261, y: 0.26009, z: 0.48152}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3048,6 +3135,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!137 &1403299730 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 137977633181334670, guid: e6ba3498ffa1e534b91a07264266e6b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 422442126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1432636572
 GameObject:
   m_ObjectHideFlags: 0
@@ -3059,7 +3152,7 @@ GameObject:
   - component: {fileID: 1432636573}
   m_Layer: 0
   m_Name: boxing bag right
-  m_TagString: RightHandCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3110,7 +3203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469630223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.196, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2040911943}
@@ -3344,7 +3437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525527695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.196, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 91981862}
@@ -4061,7 +4154,7 @@ Transform:
   m_GameObject: {fileID: 1708978361}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.744, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.4, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.2947611, z: 0.01}
   m_Children: []
   m_Father: {fileID: 2025354254}
   m_RootOrder: 1
@@ -4077,7 +4170,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.13476485, y: 0.38448283, z: -0.03738158}
+  m_ConnectedAnchor: {x: 0, y: -0.02014215, z: -0.03738158}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -4255,7 +4348,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SCORE:0
+  m_Text: 'SCORE: 0'
 --- !u!222 &1735204950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4597,7 +4690,7 @@ GameObject:
   - component: {fileID: 1906167302}
   m_Layer: 0
   m_Name: boxing bag Left
-  m_TagString: LeftHandCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4704,8 +4797,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938740858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5689998, z: 3.2680001}
-  m_LocalScale: {x: 1.8934859, y: 0.59975123, z: 0.29349}
+  m_LocalPosition: {x: 0, y: 1.81, z: 3.2680001}
+  m_LocalScale: {x: 1.8934859, y: 1.0168782, z: 0.29349}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -4766,7 +4859,7 @@ GameObject:
   - component: {fileID: 2025354254}
   m_Layer: 0
   m_Name: boxing bag Center
-  m_TagString: LeftHandCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4798,7 +4891,7 @@ GameObject:
   - component: {fileID: 2040911943}
   m_Layer: 0
   m_Name: boxing bag Left
-  m_TagString: LeftHandCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

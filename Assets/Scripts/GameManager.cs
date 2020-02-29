@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
         public GameObject bagConfiguration;
     }
 
+    // Singleton access
     public static GameManager instance;
 
     [SerializeField]
@@ -28,9 +30,19 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private float angleThresholdDegrees = 30.0f;
 
+    [SerializeField]
+    private Text timerText;
+
+    [SerializeField]
+    private SkinnedMeshRenderer leftHandRenderer;
+
+    [SerializeField]
+    private SkinnedMeshRenderer rightHandRenderer;
+
     private int levelIndex = 0;
     private float angleThresholdDot;
     private LevelConfiguration currentConfig;
+
 
     public enum ScoreState
     {
@@ -109,6 +121,7 @@ public class GameManager : MonoBehaviour
             
             // Count down timer
             Debug.Log("Time: " + counter);
+            timerText.text = "Time: " + counter;
         }
 
         // If we are here the timer is done.
@@ -118,6 +131,38 @@ public class GameManager : MonoBehaviour
         }
         else {
             EndGame();
+        }
+    }
+
+    void UpdateTransparency(float newAlpha) {
+        if (currentConfig == null) {
+            Debug.LogError("Cannot update transparencies because no level config is set, bailing");
+            return;
+        }
+
+        // Update colors of hands
+        if (leftHandRenderer != null) {
+            Color currentColor = leftHandRenderer.material.color;
+            currentColor.a = newAlpha;
+
+            leftHandRenderer.material.color = currentColor;
+        }
+
+        if (rightHandRenderer != null) {
+            Color currentColor = rightHandRenderer.material.color;
+            currentColor.a = newAlpha;
+
+            rightHandRenderer.material.color = currentColor;
+        }
+
+        // Update all transparencies for punching bags
+        Component[] renderers = currentConfig.bagConfiguration.GetComponentsInChildren<MeshRenderer>();
+
+        foreach(MeshRenderer renderer in renderers) {
+            Color currentColor = renderer.material.color;
+            currentColor.a = newAlpha;
+
+            renderer.material.color = currentColor;
         }
     }
 
@@ -132,6 +177,7 @@ public class GameManager : MonoBehaviour
                 state = ScoreState.CanScore;
 
                 // Update visuals here
+                UpdateTransparency(1.0f);
             }
         }
         else {
@@ -139,6 +185,7 @@ public class GameManager : MonoBehaviour
                 state = ScoreState.CannotScore;
 
                 // Update visuals again
+                UpdateTransparency(0.2f);
             }
         }
     }

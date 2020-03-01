@@ -18,19 +18,25 @@ public class ScoreDetector : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
 
         // If we cannot score, then no need to do anything else
-        if (GameManager.instance.state != GameManager.ScoreState.CanScore) {
+        if (GameManager.instance.scoreState != GameManager.ScoreState.CanScore) {
             return;
         }
 
         if (collisionSource == CollisionSource.LeftHand) {
             if (other.gameObject.tag == "LeftHandCollider" || other.gameObject.tag == "AllHandsCollider") {
                 ScoreManager.instance.IncreaseLeftScore();
+                return;
+            } else if (other.gameObject.tag == "IntroLeftCollider" || other.gameObject.tag == "IntroAllCollider") {
+                GameManager.instance.AdvanceIntro();
             }
         }
         
         if (collisionSource == CollisionSource.RightHand){
-            if (other.gameObject.tag == "RightHandCollider" || other.gameObject.tag == "AllHandsCollider") {
+            if (other.gameObject.tag == "RightHandCollider") {
                 ScoreManager.instance.IncreaseRightScore();
+                return;
+            } else if (other.gameObject.tag == "IntroRightCollider") {
+                GameManager.instance.AdvanceIntro();
             }
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+    // Singleton Access
     public static ScoreManager instance;
 
     private int leftScore = 0;

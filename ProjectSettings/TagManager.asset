@@ -9,6 +9,7 @@ TagManager:
   - AllHandsCollider
   - IntroLeftCollider
   - IntroRightCollider
+  - RestartCollider
   layers:
   - Default
   - TransparentFX

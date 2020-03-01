@@ -14,6 +14,9 @@ public class ScoreManager : MonoBehaviour
     [SerializeField]
     private Text scoreText;
 
+    [SerializeField]
+    private Text finalScoreText;
+
     public void IncreaseLeftScore() {
         leftScore++;
         Debug.Log("Incrementing Left Score");
@@ -38,6 +41,10 @@ public class ScoreManager : MonoBehaviour
 
     public int GetRightScore() {
         return rightScore;
+    }
+
+    public void FinalizeScore() {
+        finalScoreText.text = "FINAL SCORE\n" + (leftScore + rightScore).ToString();
     }
 
     void Awake()

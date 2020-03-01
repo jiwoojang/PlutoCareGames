@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreDetector : MonoBehaviour
 {
@@ -22,11 +23,16 @@ public class ScoreDetector : MonoBehaviour
             return;
         }
 
+        // Restarts the game
+        if (other.gameObject.tag == "RestartCollider") {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   
+        }
+
         if (collisionSource == CollisionSource.LeftHand) {
             if (other.gameObject.tag == "LeftHandCollider" || other.gameObject.tag == "AllHandsCollider") {
                 ScoreManager.instance.IncreaseLeftScore();
                 return;
-            } else if (other.gameObject.tag == "IntroLeftCollider" || other.gameObject.tag == "IntroAllCollider") {
+            } else if (other.gameObject.tag == "IntroLeftCollider") {
                 GameManager.instance.AdvanceIntro();
             }
         }

@@ -37,10 +37,18 @@ public class GameManager : MonoBehaviour
     private Text timerText;
 
     [SerializeField]
+    private Text levelText;
+
+    [SerializeField]
     private SkinnedMeshRenderer leftHandRenderer;
+    private Color initialLeftHandColor;
 
     [SerializeField]
     private SkinnedMeshRenderer rightHandRenderer;
+    private Color initialRightHandColor;
+
+    [SerializeField]
+    private Color multiHandInteractionColor;
 
     [SerializeField]
     private List<GameObject> introButtons = new List<GameObject>();
@@ -95,9 +103,16 @@ public class GameManager : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        initialLeftHandColor = leftHandRenderer.material.color;
+        initialRightHandColor = rightHandRenderer.material.color;
     }
 
     private void Start() {
+        // Do this here incase we came from a restart
+        RevertHandColors();
+
+        // Start the intro action
         StartIntro();
     }
 
@@ -144,6 +159,7 @@ public class GameManager : MonoBehaviour
     public void StartNextLevel() {
         if (levelIndex < levels.Count) {
             Debug.Log("Starting Level " + levelIndex);
+            levelText.text = "LEVEL: " + (levelIndex + 1).ToString();
             StartCoroutine(RunLevel(levels[levelIndex]));
             levelIndex++;
         }
@@ -163,8 +179,12 @@ public class GameManager : MonoBehaviour
         // Clean up all punching bags, hands, and buttons
         currentConfig.bagConfiguration.SetActive(false);
 
+        // Set hands to universal interaction colors
+        SetMultiHandColors();
+
         Debug.Log("Ending Game");
         UIManager.instance.InitializeEndGameUI();
+        ScoreManager.instance.FinalizeScore();
     }
 
     private IEnumerator RunLevel(LevelConfiguration config) {
@@ -182,10 +202,21 @@ public class GameManager : MonoBehaviour
             currentConfig.bagConfiguration.SetActive(true);
         }
 
+        // Special case for middle level
+        if (levelIndex == 2) {
+            // Update colors of hands
+            SetMultiHandColors();
+        }
+        else {
+            // Update colors of hands
+            RevertHandColors();
+        }
+
         int counter = currentConfig.levelTime;
 
         // Initialize timer for the level
         Debug.Log("Time: " + counter);
+        timerText.text = "TIME: " + counter;
 
         while (counter > 0) {
             yield return new WaitForSeconds(1);
@@ -193,7 +224,7 @@ public class GameManager : MonoBehaviour
             
             // Count down timer
             Debug.Log("Time: " + counter);
-            timerText.text = "Time: " + counter;
+            timerText.text = "TIME: " + counter;
         }
 
         // If we are here the timer is done.
@@ -203,6 +234,26 @@ public class GameManager : MonoBehaviour
         }
         else {
             EndGame();
+        }
+    }
+
+    void SetMultiHandColors() {
+        if (leftHandRenderer != null) {
+            leftHandRenderer.material.color = multiHandInteractionColor;
+        }
+
+        if (rightHandRenderer != null) {
+            rightHandRenderer.material.color = multiHandInteractionColor;
+        }
+    }
+
+    void RevertHandColors() {
+        if (leftHandRenderer != null) {
+            leftHandRenderer.material.color = initialLeftHandColor;
+        }
+
+        if (rightHandRenderer != null) {
+            rightHandRenderer.material.color = initialRightHandColor;
         }
     }
 

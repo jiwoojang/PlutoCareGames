@@ -2871,20 +2871,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headTransform: {fileID: 1673915683}
   levels:
-  - levelTime: 5
-    thresholdScore: 0
+  - levelTime: 10
+    thresholdScore: 5
     bagConfiguration: {fileID: 1525527695}
-  - levelTime: 1
-    thresholdScore: 0
+  - levelTime: 10
+    thresholdScore: 7
     bagConfiguration: {fileID: 542064317}
-  - levelTime: 1
+  - levelTime: 15
     thresholdScore: 0
     bagConfiguration: {fileID: 826842993}
-  - levelTime: 1
-    thresholdScore: 0
+  - levelTime: 20
+    thresholdScore: 10
     bagConfiguration: {fileID: 1469630223}
-  - levelTime: 1
-    thresholdScore: 0
+  - levelTime: 15
+    thresholdScore: 10
     bagConfiguration: {fileID: 1201569904}
   angleThresholdDegrees: 20
   transitionWaitTime: 3

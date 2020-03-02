@@ -11,6 +11,8 @@ public class ScoreManager : MonoBehaviour
     private int leftScore = 0;
     private int rightScore = 0;
 
+    private int totalScore = 0;
+
     [SerializeField]
     private Text scoreText;
 
@@ -29,6 +31,10 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "SCORE: " + (leftScore + rightScore).ToString();
     }
 
+    public void SetTotalScore() {
+        totalScore += leftScore + rightScore;
+    }
+
     public void ResetScore() {
         leftScore = 0;
         rightScore = 0;
@@ -43,8 +49,12 @@ public class ScoreManager : MonoBehaviour
         return rightScore;
     }
 
+    public int GetTotalScore() {
+        return totalScore;
+    }
+
     public void FinalizeScore() {
-        finalScoreText.text = "FINAL SCORE\n" + (leftScore + rightScore).ToString();
+        finalScoreText.text = "FINAL SCORE\n" + totalScore.ToString();
     }
 
     void Awake()

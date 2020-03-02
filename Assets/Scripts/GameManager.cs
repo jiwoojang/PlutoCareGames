@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class GameManager : MonoBehaviour
 {
@@ -76,7 +77,9 @@ public class GameManager : MonoBehaviour
     public ScoreState scoreState = ScoreState.None;
     public GameState gameState = GameState.Intro;
 
-    private void Awake() {
+    private GameData sessionData;
+
+    private void Start() {
         if (instance == null) {
             instance = this;
         } else {
@@ -99,18 +102,18 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Intro;
 
         // Set up the intro buttons correctly
-        foreach(GameObject gameObject in introButtons)
-        {
+        foreach (GameObject gameObject in introButtons) {
             gameObject.SetActive(false);
         }
 
         initialLeftHandColor = leftHandRenderer.material.color;
         initialRightHandColor = rightHandRenderer.material.color;
-    }
 
-    private void Start() {
         // Do this here incase we came from a restart
         RevertHandColors();
+
+        // Initialize API data for this session
+        sessionData = new GameData(UUIDManager.instance.GetUUIDString());
 
         // Start the intro action
         StartIntro();
@@ -182,9 +185,41 @@ public class GameManager : MonoBehaviour
         // Set hands to universal interaction colors
         SetMultiHandColors();
 
+        // Set final score
+        sessionData.FinalizeSessionData(ScoreManager.instance.GetTotalScore());
         Debug.Log("Ending Game");
+        StartCoroutine(SendAPIData());
+    }
+
+    private void ShowEndGameState() {
         UIManager.instance.InitializeEndGameUI();
         ScoreManager.instance.FinalizeScore();
+    }
+
+    IEnumerator SendAPIData() {
+        Debug.Log("Sending API Data:");
+        Debug.Log(sessionData.ConvertToJSON());
+
+        // Make our session data into a JSON Object
+        using (UnityWebRequest www = UnityWebRequest.Put("https://prd-sql01.ddns.net/game/session_entry", sessionData.ConvertToJSON())) {
+
+            // Set appropriate headers as specified by PlutoCare
+            www.SetRequestHeader("Authorization", "Basic Z2FtZV9kZXY6cGx1dG9jYXJlZGV2dGVhbQ==");
+            www.SetRequestHeader("Content-Type", "application/json");
+
+            // Send it and wait for results!
+            yield return www.SendWebRequest();
+            Debug.Log("Response Code: " + www.responseCode);
+
+            if (www.isNetworkError || www.isHttpError) {
+                Debug.LogError("API Upload Error");
+                Debug.LogError(www.error);
+            } else {
+                Debug.Log("Successfully sent API Message!");
+                Debug.Log("Response Code: " + www.responseCode);
+                ShowEndGameState();
+            }
+        }
     }
 
     private IEnumerator RunLevel(LevelConfiguration config) {
@@ -197,6 +232,9 @@ public class GameManager : MonoBehaviour
 
         // Setup new config
         currentConfig = config;
+
+        // Add this config's data to the session data for the API
+        sessionData.AddLevelData(levelIndex + 1, currentConfig.thresholdScore, currentConfig.levelTime);
 
         if (currentConfig.bagConfiguration != null) {
             currentConfig.bagConfiguration.SetActive(true);
@@ -229,7 +267,14 @@ public class GameManager : MonoBehaviour
 
         // If we are here the timer is done.
         // See if the score threshold was met!
-        if (ScoreManager.instance.GetLeftScore() >= currentConfig.thresholdScore || ScoreManager.instance.GetRightScore() >= currentConfig.thresholdScore) {
+        int leftHandScore = ScoreManager.instance.GetLeftScore();
+        int rightHandScore = ScoreManager.instance.GetRightScore();
+
+        if (leftHandScore >= currentConfig.thresholdScore || rightHandScore >= currentConfig.thresholdScore) {
+            sessionData.levelData[levelIndex-1].CompleteLevel(leftHandScore, rightHandScore);
+            ScoreManager.instance.SetTotalScore();
+            ScoreManager.instance.ResetScore();
+
             StartNextLevel();
         }
         else {

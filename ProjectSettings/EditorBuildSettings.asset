@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/idEntry.unity
+    guid: 027c3166cfa25f34686f19a0debc1a09
+  - enabled: 1
     path: Assets/Scenes/boxing.unity
     guid: 563eb016c6eb1254791bfca59ded145f
   m_configObjects: {}

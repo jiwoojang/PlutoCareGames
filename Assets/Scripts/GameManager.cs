@@ -220,6 +220,8 @@ public class GameManager : MonoBehaviour
                 ShowEndGameState();
             }
         }
+
+        //yield return null;
     }
 
     private IEnumerator RunLevel(LevelConfiguration config) {
@@ -271,7 +273,7 @@ public class GameManager : MonoBehaviour
         int rightHandScore = ScoreManager.instance.GetRightScore();
 
         if (leftHandScore >= currentConfig.thresholdScore || rightHandScore >= currentConfig.thresholdScore) {
-            sessionData.levelData[levelIndex-1].CompleteLevel(leftHandScore, rightHandScore);
+            sessionData.CompleteLevel(levelIndex - 1, leftHandScore, rightHandScore);
             ScoreManager.instance.SetTotalScore();
             ScoreManager.instance.ResetScore();
 

@@ -32,6 +32,16 @@ public class LevelData
 }
 
 [Serializable]
+public class LevelDataWrapper
+{
+    public List<LevelData> data = new List<LevelData>();
+
+    public LevelDataWrapper(List<LevelData> newData) {
+        data = newData;
+    }
+}
+
+[Serializable]
 public class GameData
 {
     public string uid;
@@ -44,17 +54,20 @@ public class GameData
 
     public int levelCount = 0;
 
-    public List<LevelData> levelData = new List<LevelData>();
+    public string levelData;
+
+    private List<LevelData> levelDataContainer = new List<LevelData>();
 
     public GameData(string id) {
         uid = id;
+        levelData = "";
     }
 
-    public void FinalizeSessionData(int score) {
+    public void FinalizeSessionData (int score) {
         finalScore = score;
-        levelCount = levelData.Count;
+        levelCount = levelDataContainer.Count;
 
-        foreach(LevelData data in levelData) {
+        foreach(LevelData data in levelDataContainer) {
             if (data.completionState == "completed") {
                 successes++;
             }
@@ -64,11 +77,20 @@ public class GameData
         }
     }
 
+    public void CompleteLevel(int levelNumber, int finalLeftScore, int finalRightScore) {
+        levelDataContainer[levelNumber].CompleteLevel(finalLeftScore, finalRightScore);
+    }
+
     public void AddLevelData(int levelNum, int scoreToComplete, int levelTime) {
-        levelData.Add(new LevelData(levelNum, scoreToComplete, levelTime));
+        levelDataContainer.Add(new LevelData(levelNum, scoreToComplete, levelTime));
     }
 
     public string ConvertToJSON() {
+        string levelDataString = JsonUtility.ToJson(new LevelDataWrapper(levelDataContainer));
+        string base64LevelData = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(levelDataString));
+
+        levelData = base64LevelData;
+
         return JsonUtility.ToJson(this);
     }
 }

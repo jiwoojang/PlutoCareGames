@@ -2716,7 +2716,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.2695297, y: 0.38448283, z: -0.03738158}
+  m_ConnectedAnchor: {x: -0.20214725, y: -0.02014215, z: -0.03738158}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2892,7 +2892,7 @@ MonoBehaviour:
   levelText: {fileID: 851438259}
   leftHandRenderer: {fileID: 1403299730}
   rightHandRenderer: {fileID: 328761830}
-  multiHandInteractionColor: {r: 0, g: 0, b: 0, a: 0}
+  multiHandInteractionColor: {r: 0.8352941, g: 0, b: 1, a: 1}
   introButtons:
   - {fileID: 1760868198}
   - {fileID: 692623241}
@@ -2922,7 +2922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106545744}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 1.753, z: 0.388}
+  m_LocalPosition: {x: 0.45, y: 1.753, z: 0.388}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 106912613}
@@ -3166,7 +3166,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.2695297, y: 0.38448283, z: -0.03738158}
+  m_ConnectedAnchor: {x: 0.20214725, y: -0.02014215, z: -0.03738158}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -5750,7 +5750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906167301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 1.753, z: 0.388}
+  m_LocalPosition: {x: -0.45, y: 1.753, z: 0.388}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 135480403}

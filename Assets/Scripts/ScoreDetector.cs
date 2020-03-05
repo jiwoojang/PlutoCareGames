@@ -38,7 +38,7 @@ public class ScoreDetector : MonoBehaviour
         }
         
         if (collisionSource == CollisionSource.RightHand){
-            if (other.gameObject.tag == "RightHandCollider") {
+            if (other.gameObject.tag == "RightHandCollider" || other.gameObject.tag == "AllHandsCollider") {
                 ScoreManager.instance.IncreaseRightScore();
                 return;
             } else if (other.gameObject.tag == "IntroRightCollider") {

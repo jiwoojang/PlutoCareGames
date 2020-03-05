@@ -11,6 +11,7 @@ public class LevelData
     public int levelTimeToComplete;
     public int levelLeftHandScore;
     public int levelRightHandScore;
+    public float levelTimeToReachThresholdScore;
     public int levelFinalScore;
     public string completionState = "not_complete";
 
@@ -23,10 +24,11 @@ public class LevelData
         levelFinalScore = 0;
     }
 
-    public void CompleteLevel(int finalLeftHandScore, int finalRightHandScore) {
+    public void CompleteLevel(int finalLeftHandScore, int finalRightHandScore, float timeToBeat) {
         levelLeftHandScore = finalLeftHandScore;
         levelRightHandScore = finalRightHandScore;
         levelFinalScore = finalLeftHandScore + finalRightHandScore;
+        levelTimeToReachThresholdScore = timeToBeat;
         completionState = "completed";
     }
 }
@@ -77,8 +79,8 @@ public class GameData
         }
     }
 
-    public void CompleteLevel(int levelNumber, int finalLeftScore, int finalRightScore) {
-        levelDataContainer[levelNumber].CompleteLevel(finalLeftScore, finalRightScore);
+    public void CompleteLevel(int levelNumber, int finalLeftScore, int finalRightScore, float timeToBeat) {
+        levelDataContainer[levelNumber].CompleteLevel(finalLeftScore, finalRightScore, timeToBeat);
     }
 
     public void AddLevelData(int levelNum, int scoreToComplete, int levelTime) {

@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
     private int levelIndex = 0;
     private float angleThresholdDot;
     private LevelConfiguration currentConfig;
-
+    private float levelStartTime = 0.0f;
+    private float levelScoreThresholdTime = 0.0f;
 
     public enum ScoreState
     {
@@ -100,6 +101,8 @@ public class GameManager : MonoBehaviour
         levelIndex = 0;
         introButtonIndex = 0;
         gameState = GameState.Intro;
+        levelStartTime = 0.0f;
+        levelScoreThresholdTime = 0.0f;
 
         // Set up the intro buttons correctly
         foreach (GameObject gameObject in introButtons) {
@@ -108,6 +111,7 @@ public class GameManager : MonoBehaviour
 
         initialLeftHandColor = leftHandRenderer.material.color;
         initialRightHandColor = rightHandRenderer.material.color;
+
 
         // Do this here incase we came from a restart
         RevertHandColors();
@@ -217,11 +221,19 @@ public class GameManager : MonoBehaviour
             } else {
                 Debug.Log("Successfully sent API Message!");
                 Debug.Log("Response Code: " + www.responseCode);
-                ShowEndGameState();
             }
+
+            // Make API failure non-blocking
+            ShowEndGameState();
         }
 
         //yield return null;
+    }
+
+    public void CheckScoreThreshold(int newScore) {
+        if (currentConfig != null && levelScoreThresholdTime == 0.0f && newScore >= currentConfig.thresholdScore) {
+            levelScoreThresholdTime = Time.unscaledTime;
+        }
     }
 
     private IEnumerator RunLevel(LevelConfiguration config) {
@@ -241,6 +253,8 @@ public class GameManager : MonoBehaviour
         if (currentConfig.bagConfiguration != null) {
             currentConfig.bagConfiguration.SetActive(true);
         }
+
+        levelStartTime = Time.unscaledTime;
 
         // Special case for middle level
         if (levelIndex == 2) {
@@ -273,9 +287,12 @@ public class GameManager : MonoBehaviour
         int rightHandScore = ScoreManager.instance.GetRightScore();
 
         if (leftHandScore >= currentConfig.thresholdScore || rightHandScore >= currentConfig.thresholdScore) {
-            sessionData.CompleteLevel(levelIndex - 1, leftHandScore, rightHandScore);
+            sessionData.CompleteLevel(levelIndex - 1, leftHandScore, rightHandScore, levelScoreThresholdTime - levelStartTime);
             ScoreManager.instance.SetTotalScore();
             ScoreManager.instance.ResetScore();
+
+            levelScoreThresholdTime = 0.0f;
+            levelStartTime = 0.0f;
 
             StartNextLevel();
         }

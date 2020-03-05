@@ -21,12 +21,14 @@ public class ScoreManager : MonoBehaviour
 
     public void IncreaseLeftScore() {
         leftScore++;
+        GameManager.instance.CheckScoreThreshold(leftScore);
         Debug.Log("Incrementing Left Score");
         scoreText.text = "SCORE: " + (leftScore + rightScore).ToString();
     }
 
     public void IncreaseRightScore() {
-        rightScore++;
+        rightScore++; 
+        GameManager.instance.CheckScoreThreshold(rightScore);
         Debug.Log("Incrementing Right Score");
         scoreText.text = "SCORE: " + (leftScore + rightScore).ToString();
     }
